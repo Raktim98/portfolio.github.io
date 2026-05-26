@@ -12,13 +12,13 @@ interface NavButtonProps {
 const NavButton: React.FC<NavButtonProps> = ({ icon: Icon, label, isActive, onClick }) => (
   <button
     onClick={onClick}
-    className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${isActive
-      ? 'bg-purple-600 text-white shadow-lg transform scale-105'
-      : 'text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-gray-800 hover:cursor-pointer'
+    className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300 border ${isActive
+      ? 'bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white border-transparent shadow-lg shadow-fuchsia-500/20'
+      : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
       }`}
   >
-    <Icon size={20} />
-    <span className="block">{label}</span>
+    <Icon size={18} />
+    <span className="text-sm font-medium">{label}</span>
   </button>
 );
 

@@ -1,28 +1,33 @@
 @import "tailwindcss";
 
-@layer base {
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-animation 4s ease infinite;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-@layer components {
-  .skill-progress-bar[data-skill-level="90"] { width: 90%; }
-  .skill-progress-bar[data-skill-level="85"] { width: 85%; }
-  .skill-progress-bar[data-skill-level="80"] { width: 80%; }
-  .skill-progress-bar[data-skill-level="75"] { width: 75%; }
-  .skill-progress-bar[data-skill-level="70"] { width: 70%; }
+body {
+  background: #030712;
+  color: white;
+  font-family: Inter, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d946ef, #06b6d4);
+  border-radius: 999px;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating-animation {
+  animation: float 4s ease-in-out infinite;
 }
