@@ -42,7 +42,7 @@ const projects: Project[] = [
   },
 ];
 
-const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => (
+const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project }) => (
   <div className="group relative bg-gray-800/60 border border-gray-700/50 rounded-2xl overflow-hidden hover:border-gray-500/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col">
     {/* Top accent line */}
     <div className={`h-0.5 w-full bg-gradient-to-r ${project.accentColor}`} />
