@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-animation 4s ease infinite;
+  }
+}
+
+@layer components {
+  .skill-progress-bar[data-skill-level="90"] { width: 90%; }
+  .skill-progress-bar[data-skill-level="85"] { width: 85%; }
+  .skill-progress-bar[data-skill-level="80"] { width: 80%; }
+  .skill-progress-bar[data-skill-level="75"] { width: 75%; }
+  .skill-progress-bar[data-skill-level="70"] { width: 70%; }
+}
