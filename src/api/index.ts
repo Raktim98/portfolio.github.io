@@ -7,7 +7,7 @@ interface ContactFormData {
   message: string;
 }
 
-const API_URL = 'http://localhost:5000/api/contact';
+const API_URL = 'https://portfolio-github-io-npwu.onrender.com/api/contact';
 
 export async function contactSubmit(formData: ContactFormData) {
   try {
